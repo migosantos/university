@@ -15,21 +15,33 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.university.entities.Student;
+import com.university.service.SchoolClassService;
 import com.university.service.StudentService;
 
 @Component
-@Path("/student")
+@Path("api/student")
 @CrossOrigin
 public class StudentEndPoint {
 	
 	@Autowired
 	private StudentService studentService;
 	
+	@Autowired
+	private SchoolClassService schoolClassService;
+	
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Student> findAll() {
     	List<Student> result = studentService.getAllStudent();
         return result;
+    }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("byclass/{className}")
+    public List<Student> findAllByClassName(@PathParam("className") String className) {
+    	List<Student> students = schoolClassService.getSchoolClass(className).getStudentList();
+    	return students;
     }
 
     @GET

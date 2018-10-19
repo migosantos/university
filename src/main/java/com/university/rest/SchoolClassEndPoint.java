@@ -18,7 +18,7 @@ import com.university.entities.SchoolClass;
 import com.university.service.SchoolClassService;
 
 @Component
-@Path("/schoolclass")
+@Path("api/schoolclass")
 @CrossOrigin
 public class SchoolClassEndPoint {
 	

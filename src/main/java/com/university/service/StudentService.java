@@ -10,5 +10,4 @@ public interface StudentService {
 	Student addStudent(Student Student);
 	Student editStudent(Student Student);
 	void deleteStudent(String lastName);
-//	List<SchoolClass> getAllSchoolClassByStudentLastName(String lastName);
 }

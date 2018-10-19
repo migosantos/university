@@ -42,10 +42,4 @@ public class StudentServiceImpl implements StudentService {
 			studentRepository.deleteById(lastName);
 		}
 
-//		@Override
-//		public List<SchoolClass> getAllSchoolClassByStudentLastName(String lastName) {
-//			return this.getStudent(lastName).getSchoolClassList();
-//		}
-
-
 }
