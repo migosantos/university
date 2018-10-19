@@ -42,18 +42,17 @@ public class StudentEndPoint {
     
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/{lastName}")
     public Student create(Student student) {
     	return studentService.addStudent(student);
     }    
     
-//    @PUT
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Path("/{lastName}")
-//    public Student edit(Student student) {
-//    	return studentService.editStudent(student);
-//    }
-//    
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{lastName}")
+    public Student edit(Student student) {
+    	return studentService.editStudent(student);
+    }
+    
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{lastName}")

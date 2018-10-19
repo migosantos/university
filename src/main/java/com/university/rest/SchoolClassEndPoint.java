@@ -42,17 +42,16 @@ public class SchoolClassEndPoint {
     
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/{className}")
     public SchoolClass create(SchoolClass schoolClass) {
     	return schoolClassService.addSchoolClass(schoolClass);
     }    
-    
-//    @PUT
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Path("/{className}")
-//    public SchoolClass edit(SchoolClass schoolClass) {
-//    	return schoolClassService.editSchoolClass(schoolClass);
-//    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{className}")
+    public SchoolClass edit(SchoolClass schoolClass) {
+    	return schoolClassService.editSchoolClass(schoolClass);
+    }
     
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
