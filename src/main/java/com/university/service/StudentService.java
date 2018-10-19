@@ -2,7 +2,6 @@ package com.university.service;
 
 import java.util.List;
 
-import com.university.entities.SchoolClass;
 import com.university.entities.Student;
 
 public interface StudentService {

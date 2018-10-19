@@ -47,12 +47,12 @@ public class SchoolClassEndPoint {
     	return schoolClassService.addSchoolClass(schoolClass);
     }    
     
-    @PUT
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/{className}")
-    public SchoolClass edit(SchoolClass schoolClass) {
-    	return schoolClassService.editSchoolClass(schoolClass);
-    }
+//    @PUT
+//    @Produces(MediaType.APPLICATION_JSON)
+//    @Path("/{className}")
+//    public SchoolClass edit(SchoolClass schoolClass) {
+//    	return schoolClassService.editSchoolClass(schoolClass);
+//    }
     
     @PUT
     @Produces(MediaType.APPLICATION_JSON)

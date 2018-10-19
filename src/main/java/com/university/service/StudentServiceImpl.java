@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.university.entities.SchoolClass;
 import com.university.entities.Student;
 import com.university.respository.StudentRepository;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
 	 @Autowired
