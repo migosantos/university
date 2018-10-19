@@ -19,7 +19,7 @@ import com.university.service.SchoolClassService;
 
 @Component
 @Path("/schoolclass")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class SchoolClassEndPoint {
 	
 	@Autowired

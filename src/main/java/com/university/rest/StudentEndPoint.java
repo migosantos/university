@@ -19,7 +19,7 @@ import com.university.service.StudentService;
 
 @Component
 @Path("/student")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class StudentEndPoint {
 	
 	@Autowired
