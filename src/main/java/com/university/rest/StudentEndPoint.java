@@ -2,6 +2,8 @@ package com.university.rest;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -53,19 +55,21 @@ public class StudentEndPoint {
     }
     
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Student create(Student student) {
     	return studentService.addStudent(student);
     }    
     
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{lastName}")
     public Student edit(Student student) {
     	return studentService.editStudent(student);
     }
     
-    @PUT
+    @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{lastName}")
     public void deleteByPk(@PathParam("lastName") String lastName) {

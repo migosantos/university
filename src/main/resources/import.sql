@@ -18,6 +18,7 @@ insert into school_class_student values("Biology","Duterry");
 insert into school_class_student values("Biology","Craft");
 insert into school_class_student values("Biology","Levine");
 insert into school_class_student values("Algebra","Sloan");
+insert into school_class_student values("Algebra","Levine");
 insert into school_class_student values("Trigonometry","Richardson");
-insert into school_class_student values("Trigonometry","Clarkson");
+insert into school_class_student values("Biology","Levine");
 insert into school_class_student values("Trigonometry","Craft");
