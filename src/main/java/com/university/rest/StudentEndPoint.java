@@ -6,7 +6,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.university.entities.Student;
 import com.university.service.SchoolClassService;
 import com.university.service.StudentService;
+import com.university.validators.annotations.ValidStudent;
 
 @Component
 @Path("api/student")
@@ -59,7 +59,7 @@ public class StudentEndPoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("addtoclass/{className}")
     public Student create(@PathParam("className") String className,
-    		Student student) {
+    		@ValidStudent Student student) {
     	return studentService.addStudentToClass(className, student);
     }    
     
