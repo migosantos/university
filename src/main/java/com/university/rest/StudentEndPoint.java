@@ -57,8 +57,10 @@ public class StudentEndPoint {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Student create(Student student) {
-    	return studentService.addStudent(student);
+    @Path("addtoclass/{className}")
+    public Student create(@PathParam("className") String className,
+    		Student student) {
+    	return studentService.addStudentToClass(className, student);
     }    
     
     @POST

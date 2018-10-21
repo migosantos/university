@@ -7,7 +7,8 @@ import com.university.entities.Student;
 public interface StudentService {
 	List<Student> getAllStudent();
 	Student getStudent(String lastName);
-	Student addStudent(Student Student);
-	Student editStudent(Student Student);
+	Student addStudent(Student student);
+	Student addStudentToClass(String className, Student student);
+	Student editStudent(Student student);
 	void deleteStudent(String lastName);
 }
